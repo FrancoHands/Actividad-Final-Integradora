@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de gastos personales</title>
+  <link rel = "stylesheet" href = "styles.css">
+</head>
+<body>
+  <header class = "banner">
+    <h1>Calculadora de gastos personales</h1>
+  </header>
+  <nav class = "barraTareas">
+    <a href="Gastos.html" class="boton">Gastos</a>
+    <a href="NuevoRegistro.html" class="boton">Nuevo Registro</a>
+    <a href="EditarRegistro.html" class="boton">Editar Registro</a>
+  </nav>
+
+<!-- Inputs -->
+
+  <form class="formulario" id="formNuevo">
+  <label for="concepto">Concepto</label>
+  <input type="text" id="concepto" name="concepto">
+
+  <label for="categoria">Categoría</label>
+  <input type="text" id="categoria" name="categoria">
+
+  <label for="monto">Monto</label>
+  <input type="number" id="monto" name="monto">
+
+  <button type="button">Guardar</button>
+</form>
+
+  <script src="app.js"></script>
+</body>
+</html>

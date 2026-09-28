@@ -1,0 +1,61 @@
+body {
+  background-color: rgb(214, 240, 255);
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.banner {
+  display: flex;
+  padding: 10px;
+  background-color: rgb(214, 240, 255);
+  justify-content: center;
+  height: 30px;
+  align-items: center;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.barraTareas{
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  height: 30px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.boton {
+  padding: 8px 16px;
+  cursor: pointer;
+  flex: 1;
+  background-color: rgb(255, 214, 240);
+  color: rgb(51, 51, 51);
+  display: flex;
+  justify-content: center;
+}
+
+.tabla {
+  border:1px;
+  width: 100%;
+  color: rgb(34, 34, 34);
+  table-layout: fixed;
+  background-color: rgb(255, 255, 255);
+}
+
+.tabla th,
+.tabla td {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla th {
+  background-color: rgb(74, 74, 74);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+  padding: 10px;
+}
