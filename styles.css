@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(214, 240, 255);
   font-family: Arial, Helvetica, sans-serif
@@ -8,9 +12,12 @@ body {
   padding: 10px;
   background-color: rgb(214, 240, 255);
   justify-content: center;
-  height: 30px;
   align-items: center;
   border: 1px solid rgb(0, 0, 0);
+}
+
+.banner h1 {
+  margin: 0;
 }
 
 .barraTareas{
@@ -19,7 +26,6 @@ body {
   padding: 10px;
   background-color: rgb(255, 255, 255);
   justify-content: center;
-  height: 30px;
   border: 1px solid rgb(0, 0, 0);
 }
 
@@ -31,6 +37,19 @@ body {
   color: rgb(51, 51, 51);
   display: flex;
   justify-content: center;
+  text-decoration: none;
+}
+
+/* Botón de la página en la que está el usuario */
+.boton.activo {
+  background-color: rgb(74, 74, 74);
+  color: rgb(255, 255, 255);
+}
+
+.contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 0;
 }
 
 .tabla {
@@ -46,6 +65,7 @@ body {
   border: 1px solid rgb(0, 0, 0);
   padding: 10px;
   text-align: center;
+  overflow-wrap: break-word;
 }
 
 .tabla th {
@@ -54,8 +74,116 @@ body {
   text-align: center;
 }
 
+.tabla .sinGastos {
+  font-style: italic;
+  color: rgb(74, 74, 74);
+}
+
+.filtro {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filtro label {
+  font-weight: bold;
+  color: rgb(34, 34, 34);
+}
+
 .total {
   text-align: right;
   font-weight: bold;
   padding: 10px;
+}
+
+/* --- Formularios --- */
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 450px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.formulario label {
+  font-weight: bold;
+  margin-top: 8px;
+  color: rgb(34, 34, 34);
+}
+
+.formulario input,
+.formulario select,
+.filtro select {
+  padding: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.botonForm {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: rgb(255, 214, 240);
+  color: rgb(51, 51, 51);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.botonForm:hover {
+  background-color: rgb(214, 240, 255);
+}
+
+.botonesForm {
+  display: flex;
+  gap: 10px;
+}
+
+.botonesForm .botonForm {
+  flex: 1;
+}
+
+.mensaje {
+  min-height: 20px;
+  margin: 8px 0 0;
+  font-weight: bold;
+}
+
+.mensaje.error {
+  color: rgb(200, 0, 0);
+}
+
+.mensaje.exito {
+  color: rgb(0, 128, 0);
+}
+
+/* --- Pantallas chicas (celulares) --- */
+
+@media (max-width: 600px) {
+  .banner h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .barraTareas {
+    flex-direction: column;
+  }
+
+  .tabla th,
+  .tabla td {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .formulario {
+    max-width: 100%;
+  }
+
+  .botonesForm {
+    flex-direction: column;
+  }
 }
